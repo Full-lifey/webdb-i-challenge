@@ -58,4 +58,16 @@ server.put('/api/accounts/:id', (req, res) => {
     });
 });
 
+server.delete('/api/accounts/:id', (req, res) => {
+  db('accounts')
+    .where({ id: req.params.id })
+    .del()
+    .then(count => {
+      res.status(201).json({ message: `${count} record(s) have been deleted` });
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+});
+
 module.exports = server;
