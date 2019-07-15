@@ -68,7 +68,14 @@ VALUES ('The Shire', 'Bilbo Baggins', '1 Hobbit Hole', 'Bag End', '111', 'Middle
 The following exercises **require research**, the concepts needed to complete them have not been covered in class yet.
 
 - Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted. Should be 69.
+
+- SELECT COUNT (DISTINCT City) FROM [Customers];
+
 - Find all suppliers who have names longer than 20 characters. Returns 11 records.
+
+- SELECT \* FROM Suppliers
+  WHERE LENGTH(suppliername) > 20;
+
 - Add a `query string` option to your `GET /api/accounts` endpoint. The `query string` may contain `limit`, `sortby` and `sortdir` keys. If these keys are provided, use these values to limit and sort the `accounts` which are selected from the database. Reference the docs for sorting and limiting in `knex`.
 
 ```js
