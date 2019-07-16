@@ -43,10 +43,18 @@ LIMIT 10;
 INSERT into Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
 VALUES ('The Shire', 'Bilbo Baggins', '1 Hobbit Hole', 'Bag End', '111', 'Middle Earth');
 
+- SELECT \* FROM [Customers]
+  order by customerid desc
+  limit 1;
+
 - update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
 
 - UPDATE Customers SET PostalCode = '11122'
   WHERE CustomerName = 'The Shire';
+
+  - SELECT \* FROM [Customers]
+    order by customerid desc
+    limit 1;
 
 **Clicking the `Restore Database` button in the page will repopulate the database with the original data and discard all changes you have made**.
 
